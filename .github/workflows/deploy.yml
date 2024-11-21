@@ -31,6 +31,6 @@ jobs:
         with:
           project: "arronmccror-photography-89"
           entrypoint: "main.ts"
-          root: "photo-ez"
+          root: ""
           
           
