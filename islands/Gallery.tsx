@@ -22,7 +22,7 @@ export function Gallery(props: JSX.HTMLAttributes<any>) {
     <div id="gallery" class="gallery-container">
       {images.map((image, index) => (
         <a
-          class={"block my-2 mr-2 rounded-lg shadow-lg overflow-hidden"}
+          class={"block mb-2 mr-2 rounded-lg shadow-lg overflow-hidden"}
           href={"gallery/" + image.name}
           data-pswp-width={image.widthFull}
           data-pswp-height={image.heightFull}
