@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --text-glow-color: hsl(211, 100%, 40%);
+  --text-glow-color-outer: hsl(216, 100%, 17%);
+}
+
 .edu-au-vic-wa-nt-pre-font {
   font-family: "Edu AU VIC WA NT Pre", cursive;
   font-optical-sizing: auto;
@@ -9,11 +14,22 @@
   font-style: normal;
 }
 body {
-  font-family: "Edu AU VIC WA NT Pre", cursive;
+  font-family: "Noto Sans", serif;
   font-weight: 400;
+}
+h1,h2,h3 {
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  font-weight: 900;
+  text-shadow: -2px 0 10px rgba(0, 0, 0, 0.4), 0 0 5px var(--text-glow-color),
+  0 0 10px var(--text-glow-color), 0 0 15px var(--text-glow-color),
+  0 0 20px var(--text-glow-color), 0 0 25px var(--text-glow-color),
+  0 0 30px var(--text-glow-color), 0 0 35px var(--text-glow-color-outer),
+  0 0 50px var(--text-glow-color-outer),
+  0 0 60px var(--text-glow-color-outer);
 }
 
 .gallery-container {
+  margin-top: 1em;
   gap: 0;
   column-count: 4;
 }

@@ -1,6 +1,8 @@
 import { Image } from "https://deno.land/x/imagescript@1.2.15/mod.ts";
 import { join } from "https://deno.land/std@0.220.0/path/mod.ts";
 
+const imgQuality = 70;
+const thumbWidth = 300;
 const inputDir = join(Deno.cwd(), "static", "gallery");
 const outputDir = join(Deno.cwd(), "static", "gallery-opt");
 
@@ -47,7 +49,7 @@ async function optimizeImages() {
 async function optimizeImgForWeb(
   inputPath,
   outputPath,
-  quality = 70,
+  quality = imgQuality,
   fileName,
 ) {
   try {
@@ -58,7 +60,8 @@ async function optimizeImgForWeb(
     const image = await Image.decode(inputBuffer);
     const widthFull = image.width;
     const heightFull = image.height;
-    image.resize(300, Image.RESIZE_AUTO);
+    
+    image.resize(thumbWidth, Image.RESIZE_AUTO);
 
     const outputImg = await image.encodeJPEG(quality);
 

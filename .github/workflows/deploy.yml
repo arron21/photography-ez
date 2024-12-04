@@ -40,5 +40,3 @@ jobs:
           project: "arronmccror-photography-89"
           entrypoint: "main.ts"
           root: ""
-          
-          

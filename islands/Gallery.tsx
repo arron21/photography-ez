@@ -1,10 +1,7 @@
 import { JSX } from "preact";
 import { useEffect } from "preact/hooks";
 import { images } from "../static/gallery-opt/images.ts";
-
-// import { IS_BROWSER } from "$fresh/runtime.ts";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
-// import 'photoswipe/style.css';
 
 export function Gallery(props: JSX.HTMLAttributes<any>) {
   useEffect(() => {
