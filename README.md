@@ -7,7 +7,7 @@ An easy to deploy photography portfolio
 
 ### Usage
 
-Put all your high resolution photo files into the `/static/gallery folder`
+Put all your high resolution photo files into the `/static/gallery` folder
 
 run `deno task img` 
 
@@ -20,3 +20,15 @@ A `static/gallery-opt/images.ts` will also be generated that contains an array o
 ### Gallery.tsx
 The Gallery.tsx island uses https://github.com/dimsemenov/photoswipe
 
+### Home Page
+Using environment variables, you can change your site name
+```
+Deno.env.get("SITE_NAME");
+```
+
+Or you could just update the HTML in `index.tsx`
+```
+    <h1 class="text-4xl py-4">
+        {SiteName ?? "Photography Portfolio"}
+    </h1>
+```
