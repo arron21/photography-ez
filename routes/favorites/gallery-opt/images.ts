@@ -1,1 +1,61 @@
-export const images = [{"name":"shed.jpg","widthFull":4270,"heightFull":3433,"width":300,"height":241},{"name":"mailbox.jpg","widthFull":4900,"heightFull":3267,"width":300,"height":200},{"name":"cows.jpg","widthFull":3110,"heightFull":2108,"width":300,"height":203},{"name":"tv-cactus.jpg","widthFull":5184,"heightFull":3456,"width":300,"height":200},{"name":"lemur.jpg","widthFull":5184,"heightFull":3456,"width":300,"height":200},{"name":"night-goose.jpg","widthFull":3276,"heightFull":3354,"width":300,"height":307},{"name":"man-at-work.jpg","widthFull":5184,"heightFull":3456,"width":300,"height":200},{"name":"temper.jpg","widthFull":2695,"heightFull":1583,"width":300,"height":176},{"name":"cow.jpg","widthFull":5184,"heightFull":3456,"width":300,"height":200},{"name":"chicken.jpg","widthFull":5184,"heightFull":3456,"width":300,"height":200}]
+export const images = [{
+  "name": "shed.jpg",
+  "widthFull": 4270,
+  "heightFull": 3433,
+  "width": 300,
+  "height": 241,
+}, {
+  "name": "mailbox.jpg",
+  "widthFull": 4900,
+  "heightFull": 3267,
+  "width": 300,
+  "height": 200,
+}, {
+  "name": "cows.jpg",
+  "widthFull": 3110,
+  "heightFull": 2108,
+  "width": 300,
+  "height": 203,
+}, {
+  "name": "tv-cactus.jpg",
+  "widthFull": 5184,
+  "heightFull": 3456,
+  "width": 300,
+  "height": 200,
+}, {
+  "name": "lemur.jpg",
+  "widthFull": 5184,
+  "heightFull": 3456,
+  "width": 300,
+  "height": 200,
+}, {
+  "name": "night-goose.jpg",
+  "widthFull": 3276,
+  "heightFull": 3354,
+  "width": 300,
+  "height": 307,
+}, {
+  "name": "man-at-work.jpg",
+  "widthFull": 5184,
+  "heightFull": 3456,
+  "width": 300,
+  "height": 200,
+}, {
+  "name": "temper.jpg",
+  "widthFull": 2695,
+  "heightFull": 1583,
+  "width": 300,
+  "height": 176,
+}, {
+  "name": "cow.jpg",
+  "widthFull": 5184,
+  "heightFull": 3456,
+  "width": 300,
+  "height": 200,
+}, {
+  "name": "chicken.jpg",
+  "widthFull": 5184,
+  "heightFull": 3456,
+  "width": 300,
+  "height": 200,
+}];

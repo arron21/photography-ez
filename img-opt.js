@@ -60,7 +60,7 @@ async function optimizeImgForWeb(
     const image = await Image.decode(inputBuffer);
     const widthFull = image.width;
     const heightFull = image.height;
-    
+
     image.resize(thumbWidth, Image.RESIZE_AUTO);
 
     const outputImg = await image.encodeJPEG(quality);

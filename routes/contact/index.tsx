@@ -21,10 +21,10 @@ export const handler: Handlers<ContactForm & { success?: boolean }> = {
     // Check for success query parameter
     const url = new URL(req.url);
     const success = url.searchParams.get("success") === "true";
-    
+
     return ctx.render({
       ...initialState,
-      success
+      success,
     });
   },
 
@@ -66,7 +66,11 @@ export const handler: Handlers<ContactForm & { success?: boolean }> = {
 };
 
 // The contact page component
-export default function ContactPage({ data }: PageProps<ContactForm & { errors?: Partial<ContactForm>, success?: boolean }>) {
+export default function ContactPage(
+  { data }: PageProps<
+    ContactForm & { errors?: Partial<ContactForm>; success?: boolean }
+  >,
+) {
   const errors = data.errors || {};
   const success = data.success || false;
 
@@ -82,8 +86,8 @@ export default function ContactPage({ data }: PageProps<ContactForm & { errors?:
           </div>
         )}
         <div>
-            <h1 class="text-5xl md:text-7xl">Contact</h1>
-            <p>Drop me a line if you want to talk about art sometime.</p>
+          <h1 class="text-5xl md:text-7xl">Contact</h1>
+          <p>Drop me a line if you want to talk about art sometime.</p>
         </div>
 
         <form method="POST">
@@ -138,7 +142,8 @@ export default function ContactPage({ data }: PageProps<ContactForm & { errors?:
                 errors.message ? "border-red-500" : "border-gray-300"
               }`}
               required
-            ></textarea>
+            >
+            </textarea>
             {errors.message && (
               <p class="text-red-500 text-xs italic">{errors.message}</p>
             )}

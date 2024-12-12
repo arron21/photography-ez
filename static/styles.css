@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 :root {
   --text-glow-color: hsl(211, 100%, 40%);
@@ -71,7 +70,6 @@ h1 {
   width: 100%;
   height: auto;
 }
-
 
 /*! PhotoSwipe main CSS by Dmytro Semenov | photoswipe.com */
 

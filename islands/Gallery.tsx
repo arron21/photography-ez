@@ -36,7 +36,11 @@ export function Gallery({ images, ...props }: GalleryProps) {
           target="_blank"
           rel="noreferrer"
         >
-          <img class="aspect-square object-cover" src={"gallery-opt/" + image.name} alt="" />
+          <img
+            class="aspect-square object-cover"
+            src={"gallery-opt/" + image.name}
+            alt=""
+          />
         </a>
       ))}
     </div>

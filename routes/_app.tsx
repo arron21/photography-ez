@@ -23,7 +23,6 @@ export default function App({ Component }: PageProps) {
             <a href="/favorites">Favorites</a>
             <a href="/b-sides">B Sides</a>
             <a href="/contact">Contact</a>
-
           </nav>
           <Component />
         </div>

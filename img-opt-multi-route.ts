@@ -19,16 +19,15 @@ for await (const file of expandGlob("{routes}/**/gallery")) {
 
 console.log(inputDirs);
 
-
 /**
  * Optimizes the images in the inputDir directory and saves them to the outputDir directory
  * writes the optimized images metadata to a images.ts file in the outputDir directory
  */
 async function optimizeImages(galleryDir: string) {
-  const galleryDirOpt = galleryDir+'-opt';
+  const galleryDirOpt = galleryDir + "-opt";
   // const galleryDirOpt = '/static/gallery-opt';
-  const staticGalleryDir = '/static/gallery/';
-  const staticGalleryDirOptimized = '/static/gallery-opt/';
+  const staticGalleryDir = "/static/gallery/";
+  const staticGalleryDirOptimized = "/static/gallery-opt/";
 
   const files = [];
 
@@ -37,7 +36,6 @@ async function optimizeImages(galleryDir: string) {
     Deno.mkdirSync(galleryDirOpt);
   } catch {
     Deno.mkdirSync(galleryDirOpt);
-    
   }
 
   /**
@@ -61,14 +59,12 @@ async function optimizeImages(galleryDir: string) {
     /\.(jpg|jpeg|png|webp|gif)$/i.test(file)
   );
 
-  const imagesMetaDataArr: Img[]  = [];
+  const imagesMetaDataArr: Img[] = [];
   for (const img of images) {
-
     const inputBuffer = await Deno.readFile(`${galleryDir}/${img}`);
     const image = await Image.decode(inputBuffer);
     const outputImg = await image.encodeJPEG(70);
     await Deno.writeFile(`${outputDirFull}/${img}`, outputImg);
-
 
     const imgData = await optimizeImgForWeb(
       `${galleryDir}/${img}`,
@@ -97,30 +93,29 @@ async function optimizeImgForWeb(
   quality = imgQuality,
   fileName: string,
 ): Promise<Img> {
-  
-    // Read the input file
-    const inputBuffer = await Deno.readFile(inputPath);
+  // Read the input file
+  const inputBuffer = await Deno.readFile(inputPath);
 
-    // Decode the image
-    const image = await Image.decode(inputBuffer);
-    const widthFull = image.width;
-    const heightFull = image.height;
-    
-    image.resize(thumbWidth, Image.RESIZE_AUTO);
+  // Decode the image
+  const image = await Image.decode(inputBuffer);
+  const widthFull = image.width;
+  const heightFull = image.height;
 
-    const outputImg = await image.encodeJPEG(quality);
+  image.resize(thumbWidth, Image.RESIZE_AUTO);
 
-    await Deno.writeFile(outputPath, outputImg);
+  const outputImg = await image.encodeJPEG(quality);
 
-    const obj = {
-      name: fileName,
-      widthFull,
-      heightFull,
-      width: image.width,
-      height: image.height,
-    };
+  await Deno.writeFile(outputPath, outputImg);
 
-    return obj;
+  const obj = {
+    name: fileName,
+    widthFull,
+    heightFull,
+    width: image.width,
+    height: image.height,
+  };
+
+  return obj;
   // } catch (error) {
   //   console.error(`Error converting ${inputPath} to Optimized file:`, error);
   // }
@@ -129,7 +124,7 @@ async function optimizeImgForWeb(
 if (import.meta.main) {
   console.log(`Optimizing images please wait...`);
   const t0 = performance.now();
-  for(let dir of inputDirs){
+  for (let dir of inputDirs) {
     await optimizeImages(dir);
   }
   // await optimizeImages();
