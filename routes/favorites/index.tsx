@@ -8,7 +8,7 @@ export default function MyPage(req: Request, ctx: RouteContext) {
       <div class="grid grid-cols-1 md:grid-cols-2">
         <div>
 
-      <h1 class="text-7xl">
+      <h1 class="text-5xl md:text-7xl">
             Favorites
         </h1>
         <p class="text-balance">These are some of my favorite photos I have taken.</p>

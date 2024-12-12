@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <div class="">
-        <h1 class="text-7xl py-4 mb-8">
+        <h1 class="text-5xl md:text-7xl py-4 mb-8">
           {SiteName ?? "Photography Portfolio"}
         </h1>
         <div class="text-3xl leading-relaxed text-balance">

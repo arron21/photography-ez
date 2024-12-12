@@ -82,7 +82,7 @@ export default function ContactPage({ data }: PageProps<ContactForm & { errors?:
           </div>
         )}
         <div>
-            <h1 class="text-7xl">Contact</h1>
+            <h1 class="text-5xl md:text-7xl">Contact</h1>
             <p>Drop me a line if you want to talk about art sometime.</p>
         </div>
 
