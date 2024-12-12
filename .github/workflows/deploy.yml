@@ -29,7 +29,7 @@ jobs:
           node-version: lts/*
 
       - name: Install step
-        run: "deno task img"
+        run: "deno task img-multi"
 
       - name: Build step
         run: "deno task build"
@@ -40,3 +40,5 @@ jobs:
           project: "arronmccror-photography-89"
           entrypoint: "main.ts"
           root: ""
+          
+          
