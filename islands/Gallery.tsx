@@ -1,9 +1,18 @@
 import { JSX } from "preact";
 import { useEffect } from "preact/hooks";
-import { images } from "../static/gallery-opt/images.ts";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 
-export function Gallery(props: JSX.HTMLAttributes<any>) {
+interface Image {
+  name: string;
+  widthFull: number;
+  heightFull: number;
+}
+
+interface GalleryProps extends JSX.HTMLAttributes<any> {
+  images: Image[];
+}
+
+export function Gallery({ images, ...props }: GalleryProps) {
   useEffect(() => {
     const lightbox = new PhotoSwipeLightbox({
       gallery: "#gallery",
@@ -16,10 +25,10 @@ export function Gallery(props: JSX.HTMLAttributes<any>) {
   }, []);
 
   return (
-    <div id="gallery" class="gallery-container">
+    <div id="gallery" class="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-4 ">
       {images.map((image, index) => (
         <a
-          class={"block mb-2 mr-2 rounded-lg shadow-lg overflow-hidden"}
+          class="aspect-square"
           href={"gallery/" + image.name}
           data-pswp-width={image.widthFull}
           data-pswp-height={image.heightFull}
@@ -27,7 +36,7 @@ export function Gallery(props: JSX.HTMLAttributes<any>) {
           target="_blank"
           rel="noreferrer"
         >
-          <img src={"gallery-opt/" + image.name} alt="" />
+          <img class="aspect-square object-cover" src={"gallery-opt/" + image.name} alt="" />
         </a>
       ))}
     </div>

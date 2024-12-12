@@ -16,11 +16,14 @@ export default function App({ Component }: PageProps) {
         >
         </link>
       </head>
-      <body class="bg-white dark:bg-slate-800 text-slate-900 dark:text-white leading-loose">
-        <div class="px-4 py-8 mx-auto ">
-          <nav class="text-center flex gap-3 justify-center">
+      <body class="bg-white dark:bg-gray-950 text-slate-900 dark:text-white leading-loose">
+        <div class="grid m-6">
+          <nav class="grid grid-flow-col my-3">
             <a href="/">Home</a>
-            <a href="/about">About</a>
+            <a href="/favorites">Favorites</a>
+            <a href="/b-sides">B Sides</a>
+            <a href="/contact">Contact</a>
+
           </nav>
           <Component />
         </div>

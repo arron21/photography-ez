@@ -4,18 +4,17 @@
 
 An easy to deploy photography portfolio
 
-
 ### Usage
 
-Put all your high resolution photo files into the `/static/gallery` folder
+Create routes for each collection of photos and include a gallery folder in each of them. ex: /routes/b-sides/gallery/PHOTOSHERE
 
-run `deno task img` 
+run `deno task img-multi` 
 
 Your photo files will have thumbnails created using https://deno.land/x/imagescript@1.3.0
 
 The thumbnails are saved to `/static/gallery-opt`
 
-A `static/gallery-opt/images.ts` will also be generated that contains an array of all your images. You can import the `images` variable from this file into any UI file.
+A `images.ts` will also be generated for each route/gallery you defined, you can import this into your route Gallery island, see the favorites route for an example
 
 ### Gallery.tsx
 The Gallery.tsx island uses https://github.com/dimsemenov/photoswipe
@@ -28,7 +27,7 @@ Deno.env.get("SITE_NAME");
 
 Or you could just update the HTML in `index.tsx`
 ```
-    <h1 class="text-4xl py-4">
+    <h1 class="">
         {SiteName ?? "Photography Portfolio"}
     </h1>
 ```

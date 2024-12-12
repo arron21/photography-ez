@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --text-glow-color: hsl(211, 100%, 40%);
@@ -14,10 +16,15 @@
   font-style: normal;
 }
 body {
-  font-family: "Noto Sans", serif;
+  /* font-family: "Noto Sans", serif; */
+  font-family: "Questrial", sans-serif;
+
   font-weight: 400;
 }
-h1,h2,h3 {
+h1 {
+  font-size: clamp(10rem, 10vw, 30rem);
+}
+/* h1,h2,h3 {
   font-family: "Edu AU VIC WA NT Pre", cursive;
   font-weight: 900;
   text-shadow: -2px 0 10px rgba(0, 0, 0, 0.4), 0 0 5px var(--text-glow-color),
@@ -26,7 +33,7 @@ h1,h2,h3 {
   0 0 30px var(--text-glow-color), 0 0 35px var(--text-glow-color-outer),
   0 0 50px var(--text-glow-color-outer),
   0 0 60px var(--text-glow-color-outer);
-}
+} */
 
 .gallery-container {
   margin-top: 1em;
@@ -50,6 +57,22 @@ h1,h2,h3 {
     column-count: 1;
   }
 }
+/* Swiss Minimalist Design for Gallery Container */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-container img {
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+
 /*! PhotoSwipe main CSS by Dmytro Semenov | photoswipe.com */
 
 .pswp {

@@ -8,7 +8,8 @@
     "build": "deno run -A dev.ts build",
     "preview": "deno run -A main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update .",
-    "img": "deno run --allow-read --allow-write --allow-net img-opt.js"
+    "img": "deno run --allow-read --allow-write --allow-net img-opt.js",
+    "img-multi": "deno run --allow-read --allow-write --allow-net img-opt-multi-route.ts"
   },
   "lint": {
     "rules": {
