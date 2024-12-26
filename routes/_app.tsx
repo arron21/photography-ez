@@ -1,11 +1,13 @@
 import { type PageProps } from "$fresh/server.ts";
+
 export default function App({ Component }: PageProps) {
+  const title =  Deno.env.get("SITE_TITLE");
   return (
     <html>
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>photo-ez</title>
+        <title>{title || 'photo-ez'}</title>
         <link rel="stylesheet" href="/styles.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
