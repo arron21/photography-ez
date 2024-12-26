@@ -28,7 +28,7 @@ export function Gallery({ images, ...props }: GalleryProps) {
     <div id="gallery" class="grid grid-cols-3 gap-2 md:gap-4 ">
       {images.map((image, index) => (
         <a
-          class="aspect-square"
+          class="aspect-square object-cover"
           href={"gallery/" + image.name}
           data-pswp-width={image.widthFull}
           data-pswp-height={image.heightFull}
@@ -38,6 +38,7 @@ export function Gallery({ images, ...props }: GalleryProps) {
         >
           <img
             class="aspect-square object-cover"
+            width={image.width}
             src={"gallery-opt/" + image.name}
             alt=""
           />

@@ -1,5 +1,6 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
+import { GalleryInfo } from "../../islands/GalleryInfo.tsx";
 
 // Interface to define the shape of our form data
 interface ContactForm {
@@ -85,10 +86,9 @@ export default function ContactPage(
             Your message was sent successfully!
           </div>
         )}
-        <div>
-          <h1 class="text-5xl md:text-10xl">Contact</h1>
-          <p class="text-balance text-3xl md:text-7xl">Drop me a line if you want to talk about art sometime.</p>
-        </div>
+
+        <GalleryInfo heading={"Contact"} copy={`Drop me a line if you want to talk about art sometime.`} />
+
 
         <form method="POST">
           <div class="mb-4">

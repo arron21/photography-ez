@@ -25,19 +25,19 @@ export default function App({ Component }: PageProps) {
         <nav class="text-xl grid grid-flow-row sm:grid-flow-col">
   <a
     href="/"
-    class="px-4 py-2 border border-gray-100 text-gray-300 hover:bg-gray-100 hover:text-black transition-colors"
+    class="px-4 py-2 border border-r-0 border-gray-100 text-gray-300 hover:bg-gray-100 hover:text-black transition-colors"
   >
     Home
   </a>
   <a
     href="/favorites"
-    class="px-4 py-2 border border-gray-100 text-gray-300 hover:bg-gray-100 hover:text-black transition-colors"
+    class="px-4 py-2 border border-r-0 border-gray-100 text-gray-300 hover:bg-gray-100 hover:text-black transition-colors"
   >
     Favorites
   </a>
   <a
     href="/b-sides"
-    class="px-4 py-2 border border-gray-100 text-gray-300 hover:bg-gray-100 hover:text-black transition-colors"
+    class="px-4 py-2 border border-r-0 border-gray-100 text-gray-300 hover:bg-gray-100 hover:text-black transition-colors"
   >
     B Sides
   </a>

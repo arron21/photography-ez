@@ -11,6 +11,7 @@ import * as $favorites_gallery_opt_images from "./routes/favorites/gallery-opt/i
 import * as $favorites_index from "./routes/favorites/index.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $Gallery from "./islands/Gallery.tsx";
+import * as $GalleryInfo from "./islands/GalleryInfo.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -26,6 +27,7 @@ const manifest = {
   },
   islands: {
     "./islands/Gallery.tsx": $Gallery,
+    "./islands/GalleryInfo.tsx": $GalleryInfo,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
