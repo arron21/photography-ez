@@ -7,10 +7,10 @@ export default function MyPage(req: Request, ctx: RouteContext) {
     <>
       <div class="grid grid-cols-1 md:grid-cols-2">
         <div>
-          <h1 class="text-5xl md:text-7xl">
+          <h1 class="text-5xl md:text-10xl">
             Favorites
           </h1>
-          <p class="text-balance">
+          <p class="text-balance leading-tight text-3xl md:text-7xl">
             These are some of my favorite photos I have taken.
           </p>
         </div>

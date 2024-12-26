@@ -18,15 +18,44 @@ export default function App({ Component }: PageProps) {
         >
         </link>
       </head>
-      <body class="bg-white dark:bg-gray-950 text-slate-900 dark:text-white leading-loose">
-        <div class="grid m-6">
-          <nav class="grid grid-flow-col my-3">
-            <a href="/">Home</a>
-            <a href="/favorites">Favorites</a>
-            <a href="/b-sides">B Sides</a>
-            <a href="/contact">Contact</a>
-          </nav>
+      <body class="leading-tight bg-white dark:bg-gray-950 text-slate-900 dark:text-white leading-loose">
+        <div class="grid">
+
+
+        <nav class="text-xl grid grid-flow-row sm:grid-flow-col">
+  <a
+    href="/"
+    class="px-4 py-2 border border-gray-100 text-gray-300 hover:bg-gray-100 hover:text-black transition-colors"
+  >
+    Home
+  </a>
+  <a
+    href="/favorites"
+    class="px-4 py-2 border border-gray-100 text-gray-300 hover:bg-gray-100 hover:text-black transition-colors"
+  >
+    Favorites
+  </a>
+  <a
+    href="/b-sides"
+    class="px-4 py-2 border border-gray-100 text-gray-300 hover:bg-gray-100 hover:text-black transition-colors"
+  >
+    B Sides
+  </a>
+  <a
+    href="/contact"
+    class="px-4 py-2 border border-gray-100 text-gray-300 hover:bg-gray-100 hover:text-black transition-colors"
+  >
+    Contact
+  </a>
+</nav>
+
+
+
+<section class="m-6">
+
+
           <Component />
+</section>
         </div>
       </body>
     </html>

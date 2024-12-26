@@ -25,7 +25,7 @@ export function Gallery({ images, ...props }: GalleryProps) {
   }, []);
 
   return (
-    <div id="gallery" class="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-4 ">
+    <div id="gallery" class="grid grid-cols-3 gap-2 md:gap-4 ">
       {images.map((image, index) => (
         <a
           class="aspect-square"

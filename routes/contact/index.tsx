@@ -86,8 +86,8 @@ export default function ContactPage(
           </div>
         )}
         <div>
-          <h1 class="text-5xl md:text-7xl">Contact</h1>
-          <p>Drop me a line if you want to talk about art sometime.</p>
+          <h1 class="text-5xl md:text-10xl">Contact</h1>
+          <p class="text-balance text-3xl md:text-7xl">Drop me a line if you want to talk about art sometime.</p>
         </div>
 
         <form method="POST">

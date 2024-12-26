@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <>
       <div class="">
-        <h1 class="text-5xl md:text-7xl">
+        <h1 class="text-5xl md:text-10xl">
           {SiteName ?? "Photography Portfolio"}
         </h1>
-        <div class="leading-relaxed text-balance">
+        <div class="text-balance text-3xl md:text-7xl">
           <p>Thanks for checking out my photography</p>
           <p>I shoot on a Canon EOS Rebel SL1, a camera from 2013.</p>
           <p>
