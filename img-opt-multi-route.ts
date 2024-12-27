@@ -3,8 +3,8 @@ import { join } from "https://deno.land/std@0.220.0/path/mod.ts";
 import { expandGlob } from "https://deno.land/std@0.220.0/fs/mod.ts";
 import { Img } from "./types.ts";
 
-const imgQuality = 70;
-const thumbWidth = 300;
+const imgQuality = 80;
+const thumbWidth = 600;
 const inputDir = join(Deno.cwd(), "static", "gallery");
 const outputDirFull = join(Deno.cwd(), "static", "gallery");
 
